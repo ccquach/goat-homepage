@@ -1,0 +1,14 @@
+{
+  "name": "sports-team-homepage",
+  "version": "1.0.0",
+  "description": "Sports team homepage design",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass ./sass/main.scss ./css/style.css -w"
+  },
+  "author": "cynthia.quach",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.2"
+  }
+}

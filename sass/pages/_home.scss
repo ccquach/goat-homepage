@@ -1,0 +1,13 @@
+.box-score {
+  grid-column: full-start / full-end;
+  grid-row: 1 / span 2;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.7),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
