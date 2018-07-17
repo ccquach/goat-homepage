@@ -25,6 +25,15 @@
 .mb-sm {
   margin-bottom: 2rem; }
 
+.pb-lg {
+  padding-bottom: 8rem; }
+
+.pb-md {
+  padding-bottom: 4rem; }
+
+.pb-sm {
+  padding-bottom: 2rem; }
+
 .center-inline {
   text-align: center; }
 
@@ -42,12 +51,13 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #212121; }
 
 .heading-2, .heading-3 {
+  font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-family: "Lato", sans-serif; }
+  line-height: 1.2; }
 
 .heading-2 {
   font-size: 4rem;
@@ -224,6 +234,7 @@ body {
 
 .showcase {
   grid-column: full-start / full-end;
+  background-color: #f7f7f7;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 20vw); }
@@ -372,7 +383,7 @@ body {
 
 .headlines {
   grid-column: col-start 2 / col-end 7;
-  padding-bottom: 12rem;
+  padding-bottom: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -407,3 +418,40 @@ body {
       height: 5.5rem;
       border-radius: 50%;
       margin-bottom: 1rem; }
+
+.multimedia {
+  grid-column: center-start / center-end;
+  padding: 12rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(25vw, 1fr));
+  grid-column-gap: 6rem;
+  align-items: center; }
+  .multimedia__video {
+    width: 100%; }
+  .multimedia__content {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, min-content) 1fr;
+    grid-column-gap: 3rem; }
+  .multimedia__heading {
+    grid-column: 1 / -1; }
+  .multimedia__text {
+    grid-column: 1 / -1;
+    margin-bottom: 3rem; }
+  .multimedia__link:link, .multimedia__link:visited {
+    text-decoration: none; }
+  .multimedia__link--1 {
+    grid-column: 1 / 2; }
+  .multimedia__link--2 {
+    grid-column: 2 / 3; }
+  .multimedia__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: #fecf6a;
+    transition: fill 0.3s ease-out; }
+    .multimedia__icon:hover {
+      fill: #fdb927; }
+  .multimedia__btn {
+    grid-column: 3 / -1;
+    justify-self: center; }

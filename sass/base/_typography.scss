@@ -1,13 +1,14 @@
 body {
   font-family: $font-primary;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.7;
   color: $color-grey-dark-2;
 }
 
 %heading {
-  font-weight: 300;
   font-family: $font-display;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 .heading {
