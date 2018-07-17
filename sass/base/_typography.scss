@@ -6,7 +6,7 @@ body {
 }
 
 %heading {
-  font-weight: 400;
+  font-weight: 300;
   font-family: $font-display;
 }
 
@@ -14,7 +14,6 @@ body {
   &-2 {
     @extend %heading;
     font-size: 4rem;
-    font-weight: 300;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 

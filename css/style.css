@@ -46,12 +46,11 @@ body {
   color: #212121; }
 
 .heading-2, .heading-3 {
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Lato", sans-serif; }
 
 .heading-2 {
   font-size: 4rem;
-  font-weight: 300;
   letter-spacing: 1.5px;
   text-transform: uppercase; }
   .heading-2::after {
@@ -246,7 +245,7 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       color: #fefdfe;
-      font-size: 1.8rem;
+      font-size: inherit;
       letter-spacing: 0.5px; }
   .showcase__img {
     grid-row: 1 / -1;
@@ -286,6 +285,8 @@ body {
   font-size: 1.3rem; }
   .story__title {
     margin-bottom: 0.5rem; }
+  .story__heading {
+    font-weight: 400; }
 
 .container {
   display: grid;
