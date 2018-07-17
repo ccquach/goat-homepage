@@ -4,3 +4,32 @@ body {
   line-height: 1.6;
   color: $color-grey-dark-2;
 }
+
+%heading {
+  font-weight: 400;
+  font-family: $font-display;
+}
+
+.heading {
+  &-2 {
+    @extend %heading;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 5rem;
+      background-image: $gradient-primary;
+      margin: 3rem auto 4rem;
+    }
+  }
+
+  &-3 {
+    @extend %heading;
+    font-size: 1.8rem;
+  }
+}

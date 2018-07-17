@@ -1,0 +1,23 @@
+@mixin show-share {
+  &:hover .share {
+    opacity: 1;
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center-row;
+  flex-direction: column;
+}

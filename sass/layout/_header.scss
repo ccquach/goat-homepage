@@ -48,7 +48,9 @@
       }
 
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
+        outline: none;
         border-bottom: 2px solid currentColor;
       }
 

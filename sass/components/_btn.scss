@@ -1,0 +1,39 @@
+.btn {
+  @include flex-center-row;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: capitalize;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+
+  span {
+    margin-right: 1rem;
+    padding-bottom: 1px;
+    border-bottom: 1.5px solid transparent;
+    transition: all 0.3s ease-out;
+  }
+
+  &__icon {
+    fill: currentColor;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    color: $color-primary;
+
+    span {
+      margin-right: 2rem;
+      border-bottom: 1.5px solid currentColor;
+    }
+  }
+}

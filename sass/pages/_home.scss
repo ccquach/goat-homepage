@@ -2,12 +2,51 @@
   grid-column: full-start / full-end;
   grid-row: 1 / span 2;
 
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.7),
-      rgba($color-primary-dark, 0.7)
-    ),
-    url(../img/hero.jpg);
+  background-image: $gradient-primary, url(../img/hero.jpg);
   background-size: cover;
   background-position: bottom;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
+
+.headlines {
+  grid-column: col-start 2 / col-end 7;
+  padding-bottom: 6rem;
+  @include flex-center-column;
+
+  &__lists {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3.5rem;
+    align-items: center;
+  }
+
+  &__writer {
+    @include flex-center-column;
+
+    &-details {
+      @include flex-center-column;
+    }
+
+    &-name {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      margin-bottom: -2px;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+    }
+
+    &-img {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+  }
 }

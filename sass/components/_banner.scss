@@ -1,0 +1,54 @@
+.banner {
+  grid-column: full-start / full-end;
+  position: relative;
+
+  @include show-share;
+  background-color: $color-white;
+  width: 100%;
+  height: 40vw;
+  margin-top: -10rem;
+  clip-path: polygon(0 15vh, 100% 0, 100% 75%, 0 100%);
+
+  &__title {
+    @include absolute-center;
+    z-index: 1000;
+    width: 100%;
+    text-align: center;
+    color: rgba($color-grey-light-1, 0.9);
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  &__link {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    filter: brightness(80%);
+    transition: all 0.5s ease-out;
+  }
+
+  // FUNCTIONALITY
+
+  &:hover &__img {
+    filter: brightness(60%);
+  }
+
+  &:hover &__title {
+    opacity: 1;
+  }
+}
