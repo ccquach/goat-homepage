@@ -1,6 +1,5 @@
 .banner {
   grid-column: full-start / full-end;
-  position: relative;
 
   @include show-share;
   background-color: $color-white;

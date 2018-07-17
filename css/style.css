@@ -16,6 +16,15 @@
 .mt-sm {
   margin-top: 2rem; }
 
+.mb-lg {
+  margin-bottom: 8rem; }
+
+.mb-md {
+  margin-bottom: 4rem; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
 .center-inline {
   text-align: center; }
 
@@ -183,11 +192,11 @@ body {
   padding: 2rem;
   opacity: 0;
   transition: all 0.5s ease-out 0.3s; }
-  .share--center {
+  .share--left {
     flex-direction: column;
     left: 6rem;
     transform: translateY(-50%); }
-  .share--center .share__link:not(:last-child) {
+  .share--left .share__link:not(:last-child) {
     margin-bottom: 3rem;
     margin-right: 0; }
   .share__link:link, .share__link:visited {
@@ -213,6 +222,64 @@ body {
     fill: #db4437; }
   .share__link:hover .share__icon--3 {
     fill: #1da1f2; }
+
+.showcase {
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 20vw); }
+  .showcase__item {
+    position: relative;
+    overflow: hidden;
+    background-color: #000; }
+    .showcase__item:hover .share {
+      opacity: 1; }
+  .showcase__link {
+    display: grid;
+    grid-template-rows: 1fr minmax(20%, min-content);
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%; }
+    .showcase__link > * {
+      grid-column: 1 / -1; }
+    .showcase__link:link, .showcase__link:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fefdfe;
+      font-size: 1.8rem;
+      letter-spacing: 0.5px; }
+  .showcase__img {
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0.6;
+    transform: scale(1.1);
+    transition: all 0.5s ease-out;
+    z-index: 10; }
+  .showcase__item:hover .showcase__img,
+  .showcase__item:active .showcase__img {
+    opacity: 0.7;
+    transform: scale(1); }
+  .showcase__title {
+    grid-row: 2 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1.5rem 2rem; }
+  .showcase__icon {
+    grid-row: 1 / 2;
+    justify-self: end;
+    margin: 1rem;
+    width: 2rem;
+    height: 2rem;
+    fill: rgba(255, 255, 255, 0.7);
+    z-index: 20; }
+  .showcase__btn {
+    grid-column: 2 / span 1; }
 
 .story {
   width: 90%;
@@ -304,7 +371,7 @@ body {
 
 .headlines {
   grid-column: col-start 2 / col-end 7;
-  padding-bottom: 6rem;
+  padding-bottom: 12rem;
   display: flex;
   justify-content: center;
   align-items: center;

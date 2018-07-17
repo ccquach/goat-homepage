@@ -6,13 +6,13 @@
   opacity: 0;
   transition: all 0.5s ease-out 0.3s;
 
-  &--center {
+  &--left {
     flex-direction: column;
     left: 6rem;
     transform: translateY(-50%);
   }
 
-  &--center &__link:not(:last-child) {
+  &--left &__link:not(:last-child) {
     margin-bottom: 3rem;
     margin-right: 0;
   }
