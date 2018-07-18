@@ -11,8 +11,7 @@
 
   span {
     margin-right: 1rem;
-    padding-bottom: 1px;
-    border-bottom: 1.5px solid transparent;
+    padding: 1rem 1.5rem;
     transition: all 0.3s ease-out;
   }
 
@@ -29,11 +28,16 @@
   &:hover,
   &:focus {
     outline: none;
-    color: $color-primary;
 
     span {
       margin-right: 2rem;
-      border-bottom: 1.5px solid currentColor;
+      color: $color-grey-light-1;
+      background-color: $color-primary;
     }
+  }
+
+  &:hover &__icon,
+  &:focus &__icon {
+    fill: $color-primary;
   }
 }
