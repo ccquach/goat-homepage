@@ -117,7 +117,7 @@
   </div>
 
   <section class="headlines">
-    <h2 class="heading-2 center-inline">Latest news</h2>
+    <h2 class="heading-2 heading-2--purple center-inline">Latest news</h2>
 
     <div class="headlines__lists">
       <figure class="headlines__writer">
@@ -409,7 +409,7 @@
       <source src="./img/Squat-it.webm" type="video/webm">Sorry, your browser doesn't support embedded videos.
     </video>
     <div class="multimedia__content">
-      <h2 class="heading-2 multimedia__heading">Behind the scenes: Offseason training</h2>
+      <h2 class="heading-2 heading-2--purple multimedia__heading">Behind the scenes: Offseason training</h2>
       <p class="multimedia__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat blanditiis omnis ab excepturi quibusdam hic qui consectetur,
         accusantium quaerat suscipit sed animi autem nesciunt dolorum magnam. Officia alias vero adipisci.
@@ -645,6 +645,68 @@
         <use xlink:href="./img/sprite.svg#icon-chevron-with-circle-right"></use>
       </svg>
     </button>
+  </section>
+
+  <section class="fans">
+    <div class="feature">
+      <svg class="feature__icon rotate-45">
+        <defs>
+          <linearGradient id="purple-gradient">
+            <stop offset="5%" stop-color="#aa79d9" />
+            <stop offset="95%" stop-color="#441e69" />
+          </linearGradient>
+        </defs>
+        <use xlink:href="./img/sprite.svg#icon-ticket" fill="url(#purple-gradient)"></use>
+      </svg>
+      <h2 class="heading-2 heading-2--gold">Season ticket holder</h2>
+      <p class="feature__text">Log in to enjoy all your benefits</p>
+      <button class="btn">
+        <span>Log in</span>
+        <svg class="btn__icon">
+          <use xlink:href="./img/sprite.svg#icon-chevron-with-circle-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="feature">
+      <svg class="feature__icon">
+        <defs>
+          <linearGradient id="purple-gradient">
+            <stop offset="5%" stop-color="#aa79d9" />
+            <stop offset="95%" stop-color="#441e69" />
+          </linearGradient>
+        </defs>
+        <use xlink:href="./img/sprite.svg#icon-mobile" fill="url(#purple-gradient)"></use>
+      </svg>
+      <h2 class="heading-2 heading-2--gold">Mobile App</h2>
+      <p class="feature__text">Stay connected on all your devices</p>
+      <button class="btn">
+        <span>Learn more</span>
+        <svg class="btn__icon">
+          <use xlink:href="./img/sprite.svg#icon-chevron-with-circle-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="feature">
+      <svg class="feature__icon">
+        <defs>
+          <linearGradient id="purple-gradient">
+            <stop offset="5%" stop-color="#aa79d9" />
+            <stop offset="95%" stop-color="#441e69" />
+          </linearGradient>
+        </defs>
+        <use xlink:href="./img/sprite.svg#icon-microphone" fill="url(#purple-gradient)"></use>
+      </svg>
+      <h2 class="heading-2 heading-2--gold">Podcast</h2>
+      <p class="feature__text">Listen all day to Goats talk</p>
+      <button class="btn">
+        <span>Listen now</span>
+        <svg class="btn__icon">
+          <use xlink:href="./img/sprite.svg#icon-chevron-with-circle-right"></use>
+        </svg>
+      </button>
+    </div>
   </section>
 
 </body>

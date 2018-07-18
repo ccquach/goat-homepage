@@ -169,3 +169,14 @@
     justify-self: center;
   }
 }
+
+.fans {
+  grid-column: center-start / center-end;
+  padding: 18rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  grid-column-gap: 4rem;
+  grid-row-gap: 6rem;
+  justify-items: center;
+}

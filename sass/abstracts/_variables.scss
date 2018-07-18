@@ -36,6 +36,12 @@ $gradient-primary: linear-gradient(
   rgba($color-primary-dark, 0.7)
 );
 
+$gradient-secondary: linear-gradient(
+  to right bottom,
+  rgba($color-secondary-light, 0.7),
+  rgba($color-secondary, 0.7)
+);
+
 $gradient-darken-light: linear-gradient(
   to right bottom,
   rgba($color-black, 0.3),

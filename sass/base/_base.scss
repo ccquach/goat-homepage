@@ -10,3 +10,8 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
