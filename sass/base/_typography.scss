@@ -32,4 +32,11 @@ body {
     @extend %heading;
     font-size: 1.8rem;
   }
+
+  &-4 {
+    @extend %heading;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
 }

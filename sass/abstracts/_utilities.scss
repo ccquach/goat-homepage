@@ -1,13 +1,13 @@
 // NEGATIVE MARGIN
 
 .mt-neg-lg {
-  margin-top: -8rem;
+  margin-top: -10rem;
 }
 .mt-neg-md {
   margin-top: -4rem;
 }
 .mt-neg-sm {
-  margin-top: -2rem;
+  margin-top: -1.5rem;
 }
 
 // MARGIN
@@ -19,7 +19,7 @@
   margin-top: 4rem;
 }
 .mt-sm {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .mb-lg {
@@ -29,7 +29,17 @@
   margin-bottom: 4rem;
 }
 .mb-sm {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ml-lg {
+  margin-left: 8rem;
+}
+.ml-md {
+  margin-left: 4rem;
+}
+.ml-sm {
+  margin-left: 1.5rem;
 }
 
 // PADDING
@@ -41,7 +51,7 @@
   padding-bottom: 4rem;
 }
 .pb-sm {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 // ALIGNMENT
