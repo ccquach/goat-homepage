@@ -396,7 +396,75 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: 10vh 90vh repeat(7, min-content); }
+  grid-template-rows: 10vh 90vh repeat(6, min-content) minmax(min-content, 18vw); }
+
+.footer {
+  grid-column: full-start / full-end;
+  padding: 8rem 20rem 4rem;
+  background-color: #212121;
+  color: #fefdfe;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, max-content) 1fr;
+  grid-template-rows: repeat(2, min-content) 1fr;
+  grid-row-gap: 2.5rem;
+  grid-column-gap: 8rem; }
+  .footer__heading {
+    grid-row: 1 / 2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fecf6a; }
+  .footer__list {
+    grid-row: 2 / 3;
+    list-style: none; }
+  .footer__item:not(:last-child) {
+    margin-bottom: 1rem; }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: currentColor;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-out; }
+  .footer__link:hover, .footer__link:active {
+    color: #fdb927; }
+  .footer__social {
+    grid-column: 3 / -1;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    align-content: start;
+    grid-row-gap: 3rem;
+    grid-column-gap: 4rem; }
+    .footer__social-link {
+      line-height: 1;
+      display: block; }
+    .footer__social-icon {
+      width: 3rem;
+      height: 3rem;
+      fill: rgba(255, 255, 255, 0.6);
+      transition: fill 0.3s ease-out; }
+      .footer__social-icon--1:hover {
+        fill: #3b5998; }
+      .footer__social-icon--2:hover {
+        fill: #db4437; }
+      .footer__social-icon--3:hover {
+        fill: #c32aa3; }
+      .footer__social-icon--4:hover {
+        fill: #fffc00; }
+      .footer__social-icon--5:hover {
+        fill: #1da1f2; }
+      .footer__social-icon--6:hover {
+        fill: #ff0000; }
+  .footer__copyright {
+    grid-column: 1 / -1;
+    align-self: end;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+    color: #bdbdbd; }
 
 .header {
   grid-column: full-start / full-end;

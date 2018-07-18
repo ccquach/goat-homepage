@@ -1,0 +1,107 @@
+.footer {
+  grid-column: full-start / full-end;
+
+  padding: 8rem 20rem 4rem;
+  background-color: $color-grey-dark-2;
+  color: $color-grey-light-1;
+  font-size: 1.2rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, max-content) 1fr;
+  grid-template-rows: repeat(2, min-content) 1fr;
+  grid-row-gap: 2.5rem;
+  grid-column-gap: 8rem;
+
+  &__heading {
+    grid-row: 1 / 2;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: $color-secondary-light;
+  }
+
+  &__list {
+    grid-row: 2 / 3;
+    list-style: none;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: currentColor;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      transition: color 0.3s ease-out;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &__social {
+    grid-column: 3 / -1;
+    grid-row: 1 / span 2;
+    justify-self: end;
+
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    align-content: start;
+    grid-row-gap: 3rem;
+    grid-column-gap: 4rem;
+
+    &-link {
+      line-height: 1;
+      display: block;
+    }
+
+    &-icon {
+      width: 3rem;
+      height: 3rem;
+      fill: rgba($color-white, 0.6);
+      transition: fill 0.3s ease-out;
+
+      &--1:hover {
+        fill: $color-facebook;
+      }
+
+      &--2:hover {
+        fill: $color-googleplus;
+      }
+
+      &--3:hover {
+        fill: $color-instagram;
+      }
+
+      &--4:hover {
+        fill: $color-snapchat;
+      }
+
+      &--5:hover {
+        fill: $color-twitter;
+      }
+
+      &--6:hover {
+        fill: $color-youtube;
+      }
+    }
+  }
+
+  &__copyright {
+    grid-column: 1 / -1;
+    align-self: end;
+
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    text-align: center;
+    color: $color-grey-light-2;
+  }
+}
