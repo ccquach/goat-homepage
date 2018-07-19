@@ -640,11 +640,14 @@ body {
     border-radius: 3px;
     padding: 1.5rem 4rem;
     cursor: pointer;
+    transition: background-color 0.3s ease-out;
     display: grid;
     grid-template-columns: repeat(5, min-content);
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
     align-items: center; }
+    .box-score__game:hover, .box-score__game:focus {
+      background-color: #fefdfe; }
     .box-score__game--previous {
       grid-column: 1 / span 2; }
     .box-score__game--current {

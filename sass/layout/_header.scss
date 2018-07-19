@@ -108,12 +108,18 @@
     border-radius: 3px;
     padding: 1.5rem 4rem;
     cursor: pointer;
+    transition: background-color 0.3s ease-out;
 
     display: grid;
     grid-template-columns: repeat(5, min-content);
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
     align-items: center;
+
+    &:hover,
+    &:focus {
+      background-color: $color-grey-light-1;
+    }
 
     &--previous {
       grid-column: 1 / span 2;
