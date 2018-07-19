@@ -12,6 +12,16 @@ body {
 }
 
 .heading {
+  &-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: $color-grey-light-1;
+  }
+
   &-2 {
     @extend %heading;
     font-size: 3rem;

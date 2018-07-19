@@ -2,6 +2,7 @@
 @import './abstracts/variables';
 @import './abstracts/utilities';
 
+@import './base/animations';
 @import './base/base';
 @import './base/typography';
 
@@ -10,6 +11,7 @@
 @import './components/card';
 @import './components/feature';
 @import './components/list';
+@import './components/search';
 @import './components/share';
 @import './components/showcase';
 @import './components/story';
@@ -17,5 +19,6 @@
 @import './layout/container';
 @import './layout/footer';
 @import './layout/header';
+@import './layout/nav';
 
 @import './pages/home';

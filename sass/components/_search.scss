@@ -1,0 +1,39 @@
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  &__input {
+    flex: 0 0 90%;
+    margin-right: -3rem;
+
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 3px;
+    background-color: $color-grey-light-1;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-out;
+
+    &:focus {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__label {
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary-light;
+    transition: fill 0.3s ease-out;
+
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}

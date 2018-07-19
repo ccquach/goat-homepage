@@ -56,7 +56,6 @@
     &:hover,
     &:active,
     &:focus {
-      outline: none;
       color: $color-primary;
       border-bottom: 2px solid currentColor;
     }

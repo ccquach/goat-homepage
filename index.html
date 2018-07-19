@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400" rel="stylesheet">
-
-  <link rel="stylesheet" href="./css/icon-font.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
 
@@ -17,80 +15,160 @@
 <body class="container">
 
   <header class="header">
-    <svg class="header__logo">
-      <use xlink:href="./img/sprite.svg#icon-goat"></use>
-    </svg>
+    <!-- LOGO -->
     <nav class="nav">
+      <svg class="nav__logo">
+        <use xlink:href="./img/sprite.svg#icon-goat"></use>
+      </svg>
+
+      <!-- NAV -->
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-open-book"></use>
-            </svg>
-            <span>News</span>
-          </a>
+          <a href="#" class="nav__link">News</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-users"></use>
-            </svg>
-            <span>Team</span>
-          </a>
+          <a href="#" class="nav__link">Team</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-calendar2"></use>
-            </svg>
-            <span>Schedule</span>
-          </a>
+          <a href="#" class="nav__link">Schedule</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-ticket2"></use>
-            </svg>
-            <span>Tickets</span>
-          </a>
+          <a href="#" class="nav__link">Tickets</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-video"></use>
-            </svg>
-            <span>Multimedia</span>
-          </a>
+          <a href="#" class="nav__link">Multimedia</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-globe"></use>
-            </svg>
-            <span>Community</span>
-          </a>
+          <a href="#" class="nav__link">Community</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link">
-            <svg>
-              <use xlink:href="./img/sprite.svg#icon-flag"></use>
-            </svg>
-            <span>Fans</span>
-          </a>
+          <a href="#" class="nav__link">Fans</a>
         </li>
       </ul>
-    </nav>
-    <form action="#" class="search">
-      <input type="text" class="search__input" id="search" placeholder="Search...">
-      <label for="search" class="search__label">
-        <svg class="search__icon">
-          <use xlink:href="./img/sprite.svg#icon-magnifying-glass"></use>
-        </svg>
-      </label>
-    </form>
-  </header>
 
-  <section class="box-score"></section>
+      <!-- SEARCH -->
+      <form action="#" class="search nav__search">
+        <input type="text" class="search__input" id="search" placeholder="Search...">
+        <label for="search" class="search__label">
+          <svg class="search__icon">
+            <use xlink:href="./img/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </label>
+      </form>
+    </nav>
+
+    <!-- SCORE BOX -->
+    <div class="box-score">
+      <div class="box-score__box">
+        <svg class="box-score__arrow box-score__arrow--left">
+          <use xlink:href="./img/sprite.svg#icon-chevron-thin-left"></use>
+        </svg>
+
+        <div class="box-score__game box-score__game--previous">
+          <p class="box-score__game-date">Tue, Jul 10</p>
+          <svg class="box-score__logo">
+            <use xlink:href="./img/sprite.svg#icon-goat"></use>
+          </svg>
+          <span class="box-score__team box-score__team--1">CO</span>
+          <span class="box-score__game-score">82</span>
+          @
+          <span class="box-score__game-score">67</span>
+          <svg class="box-score__logo">
+            <use xlink:href="./img/sprite.svg#icon-tripadvisor"></use>
+          </svg>
+          <span class="box-score__team box-score__team--2">NZ</span>
+          <span class="box-score__game-quarter">Final</span>
+          <span class="box-score__game-time box-score__game-win">W</span>
+        </div>
+
+        <div class="box-score__game box-score__game--current">
+          <p class="box-score__game-date">Thur, Jul 12</p>
+          <svg class="box-score__logo">
+            <use xlink:href="./img/sprite.svg#icon-goat"></use>
+          </svg>
+          <span class="box-score__team box-score__team--1">CO</span>
+          <span class="box-score__game-score">45</span>
+          vs
+          <span class="box-score__game-score">39</span>
+          <svg class="box-score__logo">
+            <use xlink:href="./img/sprite.svg#icon-linux"></use>
+          </svg>
+          <span class="box-score__team box-score__team--2">TOR</span>
+          <span class="box-score__game-quarter">2Q</span>
+          <span class="box-score__game-time">6:32</span>
+        </div>
+
+        <!-- <div class="box-score__game box-score__game--next">
+          <p class="box-score__game-date">Fri, Jul 13</p>
+          <svg class="box-score__logo">
+            <use xlink:href="./img/sprite.svg#icon-goat"></use>
+          </svg>
+          <span class="box-score__game-score">45</span>
+          vs
+          <span class="box-score__game-score">39</span>
+          <svg class="box-score__logo">
+            <use xlink:href="./img/sprite.svg#icon-linux"></use>
+          </svg>
+          <span class="box-score__game-quarter">2Q</span>
+          <span class="box-score__game-time">6:32</span>
+        </div> -->
+
+        <a href="#" class="box-score__schedule">
+          View full schedule
+        </a>
+
+        <svg class="box-score__arrow box-score__arrow--right">
+          <use xlink:href="./img/sprite.svg#icon-chevron-thin-right"></use>
+        </svg>
+      </div>
+
+      <!-- BOX SCORE NAV -->
+      <div class="box-score__nav">
+        <a href="#" class="box-score__nav-link">
+          <svg class="box-score__icon">
+            <use xlink:href="./img/sprite.svg#icon-open-book"></use>
+          </svg>
+        </a>
+        <div class="box-score__tooltip">Read game summary</div>
+
+        <a href="#" class="box-score__nav-link">
+          <svg class="box-score__icon">
+            <use xlink:href="./img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
+        <div class="box-score__tooltip">Watch highlights</div>
+
+        <a href="#" class="box-score__nav-link">
+          <svg class="box-score__icon">
+            <use xlink:href="./img/sprite.svg#icon-camera"></use>
+          </svg>
+        </a>
+        <div class="box-score__tooltip">View photos</div>
+
+        <a href="#" class="box-score__nav-link">
+          <svg class="box-score__icon">
+            <use xlink:href="./img/sprite.svg#icon-mic"></use>
+          </svg>
+        </a>
+        <div class="box-score__tooltip">Listen to interviews</div>
+      </div>
+
+      <!-- GAME INFO -->
+      <div class="box-score__tv">
+        <button class="btn--gold box-score__btn">Game tracker</button>
+        <svg class="box-score__icon box-score__icon--tv">
+          <use xlink:href="./img/sprite.svg#icon-tv"></use>
+        </svg>
+        <p class="box-score__channel">ESPN</p>
+      </div>
+    </div>
+
+    <!-- HEADING -->
+    <h1 class="heading-1 header__heading">
+      <span class="header__heading--main">The Official Homepage of the</span>
+      <span class="header__heading--sub">Colorado Mountain Goats</span>
+    </h1>
+  </header>
 
   <div class="banner">
     <a href="#" class="banner__link">
