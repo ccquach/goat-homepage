@@ -26,6 +26,7 @@
 
   &:hover {
     transform: translateY(-0.6rem) scale(1.01);
+    box-shadow: 0 8px 8px rgba($color-black, 0.4);
   }
 
   &__icon {
