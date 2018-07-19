@@ -5,11 +5,11 @@
   display: grid;
   @include grid-template-col-center;
   grid-template-rows:
-    repeat(2, min-content)
+    min-content
     minmax(min-content, 10vw);
   align-content: start;
   align-items: center;
-  grid-row-gap: 8rem;
+  grid-row-gap: 4rem;
 
   background-image: $gradient-primary, $gradient-darken-light,
     url(../img/hero.jpg);
@@ -19,7 +19,7 @@
   clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%);
 
   font-size: 1.4rem;
-  padding: 3rem 0;
+  padding-top: 15vh; // offset fixed nav
 
   &__heading {
     grid-column: center-start / center-end;
@@ -293,20 +293,23 @@
     justify-items: end;
   }
 
+  &__channel {
+    grid-column: 2 / -1;
+
+    @include flex-center-row;
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
   &__icon--tv {
     width: 2.5rem;
     height: 2.5rem;
-    margin-right: -6rem;
+    margin-right: 1rem;
 
     &:hover {
       fill: currentColor;
     }
-  }
-
-  &__channel {
-    font-size: 1.8rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
   }
 
   &__btn {

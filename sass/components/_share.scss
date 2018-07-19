@@ -1,6 +1,6 @@
 .share {
   @include flex-center-column;
-  z-index: 9999;
+  z-index: 20;
   padding: 2rem;
   opacity: 0;
   transition: opacity 0.5s ease-out 0.3s;

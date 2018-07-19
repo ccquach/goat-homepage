@@ -14,49 +14,49 @@
 
 <body class="container">
 
-  <header class="header">
+  <nav class="nav">
     <!-- LOGO -->
-    <nav class="nav">
-      <svg class="nav__logo">
-        <use xlink:href="./img/sprite.svg#icon-goat"></use>
-      </svg>
+    <svg class="nav__logo">
+      <use xlink:href="./img/sprite.svg#icon-goat"></use>
+    </svg>
 
-      <!-- NAV -->
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#" class="nav__link">News</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Team</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Schedule</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Tickets</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Multimedia</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Community</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link">Fans</a>
-        </li>
-      </ul>
+    <!-- NAV -->
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="#" class="nav__link">News</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Team</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Schedule</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Tickets</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Multimedia</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Community</a>
+      </li>
+      <li class="nav__item">
+        <a href="#" class="nav__link">Fans</a>
+      </li>
+    </ul>
 
-      <!-- SEARCH -->
-      <form action="#" class="search nav__search">
-        <input type="text" class="search__input" id="search" placeholder="Search...">
-        <label for="search" class="search__label">
-          <svg class="search__icon">
-            <use xlink:href="./img/sprite.svg#icon-magnifying-glass"></use>
-          </svg>
-        </label>
-      </form>
-    </nav>
+    <!-- SEARCH -->
+    <form action="#" class="search nav__search">
+      <input type="text" class="search__input" id="search" placeholder="Search...">
+      <label for="search" class="search__label">
+        <svg class="search__icon">
+          <use xlink:href="./img/sprite.svg#icon-magnifying-glass"></use>
+        </svg>
+      </label>
+    </form>
+  </nav>
 
+  <header class="header">
     <!-- SCORE BOX -->
     <div class="box-score">
       <div class="box-score__box">
@@ -156,10 +156,12 @@
       <!-- GAME INFO -->
       <div class="box-score__tv">
         <button class="btn--gold box-score__btn">Game tracker</button>
-        <svg class="box-score__icon box-score__icon--tv">
-          <use xlink:href="./img/sprite.svg#icon-tv"></use>
-        </svg>
-        <p class="box-score__channel">ESPN</p>
+        <div class="box-score__channel">
+          <svg class="box-score__icon box-score__icon--tv">
+            <use xlink:href="./img/sprite.svg#icon-tv"></use>
+          </svg>
+          <span>ESPN</span>
+        </div>
       </div>
     </div>
 
@@ -170,7 +172,7 @@
     </h1>
   </header>
 
-  <div class="banner">
+  <div class="banner js--banner">
     <a href="#" class="banner__link">
       <h2 class="heading-2 banner__title">Goats top Summer League standings</h2>
       <img src="./img/feature.jpg" alt="Goats top Summer League standings" class="banner__img">
@@ -864,6 +866,11 @@
       suscipit quisquam sunt maiores.
     </p>
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="./js/vendors/jquery.waypoints.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
