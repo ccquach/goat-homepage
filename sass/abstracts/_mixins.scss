@@ -30,4 +30,93 @@
     repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
     [center-end]
     minmax(6rem, 1fr) [full-end];
+
+  @include respond(tab-port) {
+    grid-template-columns:
+      [full-start] minmax(4rem, 1fr)
+      [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(4rem, 1fr) [full-end];
+  }
+
+  @include respond(phone-small) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr)
+      [center-start]
+      repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(2rem, 1fr) [full-end];
+  }
+}
+
+@mixin section-padding {
+  padding: 8rem 0;
+
+  @include respond(huge-desk) {
+    padding: 10rem 0;
+  }
+
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+
+  @include respond(tab-small) {
+    padding: 4rem 0;
+  }
+}
+
+// MEDIA QUERY MANAGER
+
+/* 1em = 16px */
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == huge-desk {
+    // 1500px
+    @media only screen and (min-width: 93.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    // 1200px
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    // 1000px
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    // 800px
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-small {
+    // 600px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    // 500px
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone-small {
+    // 400px
+    @media only screen and (max-width: 25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == display-short {
+    // 500px
+    @media only screen and (max-height: 31.25em) {
+      @content;
+    }
+  }
 }

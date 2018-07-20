@@ -3,19 +3,49 @@
   padding-bottom: 8rem;
   @include flex-center-column;
 
+  @include respond(tab-port) {
+    grid-column: center-start / center-end;
+  }
+
+  @include respond(tab-port) {
+    padding-bottom: 6rem 0;
+  }
+
+  @include respond(tab-small) {
+    padding: 4rem 0;
+  }
+
   &__lists {
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-column-gap: 2rem;
     grid-row-gap: 3.5rem;
     align-items: center;
+
+    @include respond(tab-small) {
+      @include flex-center-column;
+    }
+  }
+
+  &__list {
+    @include respond(tab-small) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__writer {
     @include flex-center-column;
 
+    @include respond(tab-small) {
+      flex-direction: row;
+    }
+
     &-details {
       @include flex-center-column;
+
+      @include respond(tab-small) {
+        margin-left: 1.5rem;
+      }
     }
 
     &-name {
@@ -42,15 +72,24 @@
 
 .multimedia {
   grid-column: center-start / center-end;
-  padding: 12rem 0;
 
+  @include section-padding;
   display: grid;
   grid-template-columns: repeat(2, minmax(25vw, 1fr));
   grid-column-gap: 6rem;
   align-items: center;
 
+  @include respond(tab-port) {
+    grid-template-columns: none;
+    grid-row-gap: 2rem;
+  }
+
   &__video {
     width: 100%;
+
+    @include respond(tab-port) {
+      order: 1;
+    }
   }
 
   &__content {
@@ -106,14 +145,21 @@
 .content-cards {
   grid-column: full-start / full-end;
   background-color: $color-grey-light-4;
-  padding: 12rem 0;
+  @include section-padding;
 
   display: grid;
   grid-template-columns:
     minmax(6rem, 1fr)
     repeat(4, [col-start] minmax(min-content, 28.5rem) [col-end])
     minmax(6rem, 1fr);
-  grid-row-gap: 5rem;
+  grid-row-gap: 6rem;
+
+  @include respond(phone-small) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      repeat(4, [col-start] minmax(min-content, 28.5rem) [col-end])
+      minmax(2rem, 1fr);
+  }
 
   & > * {
     grid-column: col-start 1 / col-end 4;
@@ -150,8 +196,12 @@
   &__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-    grid-row-gap: 4rem;
-    grid-column-gap: 8rem;
+    grid-gap: 5rem;
+
+    @include respond(phone-small) {
+      grid-template-columns: none;
+      grid-gap: 3rem;
+    }
   }
 
   &__btn {
@@ -161,11 +211,22 @@
 
 .fans {
   grid-column: center-start / center-end;
-  padding: 12rem 0;
+  @include section-padding;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  grid-column-gap: 4rem;
-  grid-row-gap: 6rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
   justify-items: center;
+
+  @include respond(big-desk) {
+    grid-gap: 4rem;
+  }
+
+  @include respond(tab-small) {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  }
+
+  @include respond(phone-small) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
 }

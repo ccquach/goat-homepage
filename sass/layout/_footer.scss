@@ -1,16 +1,24 @@
 .footer {
   grid-column: full-start / full-end;
 
-  padding: 8rem 20rem 4rem;
+  padding: 8rem 0 4rem;
   background-color: $color-grey-dark-2;
   color: $color-grey-light-1;
   font-size: 1.2rem;
 
   display: grid;
   @include grid-template-col-center;
-  grid-template-rows: repeat(2, min-content) 1fr;
+  grid-template-rows: min-content 1fr;
   grid-row-gap: 2.5rem;
   justify-content: center;
+
+  @include respond(phone) {
+    grid-row-gap: 3.5rem;
+  }
+
+  @include respond(phone-small) {
+    grid-column-gap: 2rem;
+  }
 
   &__nav {
     grid-column: center-start / col-end 4;
@@ -21,6 +29,10 @@
     grid-column: repeat(2, max-content);
     grid-column-gap: 8rem;
     grid-row-gap: 2rem;
+
+    @include respond(phone) {
+      grid-column: center-start / center-end;
+    }
   }
 
   &__heading {
@@ -58,15 +70,26 @@
   }
 
   &__social {
-    grid-column: col-start 5 / center-end;
+    grid-column: col-start 6 / center-end;
     grid-row: 1 / 2;
-    justify-self: end;
 
     display: grid;
-    grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    grid-gap: 1rem;
     align-content: start;
-    grid-row-gap: 3rem;
-    grid-column-gap: 4rem;
+    justify-items: end;
+
+    @include respond(tab-port) {
+      grid-column: col-start 5 / center-end;
+    }
+
+    @include respond(phone) {
+      grid-column: center-start / center-end;
+      grid-row: 2 / 3;
+
+      display: flex;
+      justify-content: space-around;
+    }
 
     &-link {
       line-height: 1;
@@ -109,10 +132,14 @@
     grid-column: center-start / center-end;
     align-self: end;
 
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     margin-top: 4rem;
     text-align: center;
     color: $color-grey-light-2;
+
+    @include respond(huge-desk) {
+      width: 70%;
+    }
   }
 }

@@ -6,6 +6,16 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 20vw);
 
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 25vw);
+  }
+
+  @include respond(tab-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 20vw);
+  }
+
   &__item {
     @include show-share;
     overflow: hidden;
@@ -75,7 +85,7 @@
   }
 
   &__btn {
-    grid-column: 2 / span 1;
+    grid-column: 1 / -1;
     justify-self: center;
   }
 }
