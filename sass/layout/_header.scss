@@ -16,23 +16,26 @@
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
-  clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%);
 
-  overflow-x: hidden; // prevent animation from stretching page
   font-size: 1.4rem;
   padding-top: 12rem; // offset fixed nav
 
-  // respond to banner resizing
-  @include respond(tab-land) {
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
-  }
+  @supports (clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%)) or
+    (-webkit-clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%)) {
+    clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%);
 
-  @include respond(tab-small) {
-    clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
-  }
+    // respond to banner resizing
+    @include respond(tab-land) {
+      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    }
 
-  @include respond(phone-small) {
-    align-content: center;
+    @include respond(tab-small) {
+      clip-path: polygon(0 0, 100% 0, 100% 95vh, 0 100%);
+    }
+
+    @include respond(phone-small) {
+      align-content: center;
+    }
   }
 
   &__heading {

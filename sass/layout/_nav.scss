@@ -232,6 +232,10 @@
       }
     }
 
+    &__link {
+      padding: 2.3rem; // push bottom border to sticky nav bottom edge
+    }
+
     &__search {
       grid-column: 4 / 5;
       margin-left: 0;

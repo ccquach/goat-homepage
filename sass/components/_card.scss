@@ -52,7 +52,11 @@
     object-fit: cover;
     filter: brightness(90%);
     transition: filter 0.3s;
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%)) or
+      (-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%)) {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
   }
 
   &:hover &__img {
