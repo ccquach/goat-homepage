@@ -1,3 +1,12 @@
+%animation-before {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+%animation-after {
+  opacity: 1;
+}
+
 .headlines {
   grid-column: col-start 2 / col-end 7;
   padding-bottom: 8rem;
@@ -67,6 +76,25 @@
       border-radius: 50%;
       margin-bottom: 1rem;
     }
+  }
+}
+
+// fade in right on scroll
+.js--headlines__list {
+  @extend %animation-before;
+
+  &-1 {
+    animation-delay: 0;
+  }
+  &-2 {
+    animation-delay: 0.5s;
+  }
+  &-3 {
+    animation-delay: 1s;
+  }
+
+  &.animated {
+    @extend %animation-after;
   }
 }
 
@@ -226,6 +254,15 @@
   }
 }
 
+// flip in on scroll
+.js--card {
+  @extend %animation-before;
+
+  &.animated {
+    @extend %animation-after;
+  }
+}
+
 .fans {
   grid-column: center-start / center-end;
   @include section-padding;
@@ -245,5 +282,14 @@
 
   @include respond(phone-small) {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+
+// fade in up on scroll
+.js--fans {
+  @extend %animation-before;
+
+  &.animated {
+    @extend %animation-after;
   }
 }

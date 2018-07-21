@@ -1234,6 +1234,13 @@ body {
   .sticky .nav__mobile-label {
     justify-self: end; }
 
+.js--headlines__list, .js--card, .js--fans {
+  opacity: 0;
+  animation-duration: 1s; }
+
+.js--headlines__list.animated, .js--card.animated, .js--fans.animated {
+  opacity: 1; }
+
 .headlines {
   grid-column: col-start 2 / col-end 7;
   padding-bottom: 8rem;
@@ -1295,6 +1302,15 @@ body {
       height: 5.5rem;
       border-radius: 50%;
       margin-bottom: 1rem; }
+
+.js--headlines__list-1 {
+  animation-delay: 0; }
+
+.js--headlines__list-2 {
+  animation-delay: 0.5s; }
+
+.js--headlines__list-3 {
+  animation-delay: 1s; }
 
 .multimedia {
   grid-column: center-start / center-end;

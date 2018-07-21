@@ -1,11 +1,38 @@
 $(document).ready(function() {
+  // sticky navigation
   stickyNav();
+
+  // animations on scroll
+  animateOnScroll();
 
   // prevent mobile nav transition on screen resize
   $('.nav__mobile-checkbox').on('change', toggleMobileNav);
   // remove activated class on window resize
   $(window).on('resize', removeMobileNavTransition);
 });
+
+function animateOnScroll() {
+  // headlines
+  new Waypoint({
+    element: $('.js--headlines__list'),
+    handler: () => $('.js--headlines__list').addClass('animated fadeInRight'),
+    offset: '60%'
+  });
+
+  // content cards
+  new Waypoint({
+    element: $('.js--card'),
+    handler: () => $('.js--card').addClass('animated flipInY'),
+    offset: '60%'
+  });
+
+  // fans
+  new Waypoint({
+    element: $('.js--fans'),
+    handler: () => $('.js--fans').addClass('animated fadeInUp'),
+    offset: '60%'
+  });
+}
 
 function toggleMobileNav() {
   $('.nav__list')
