@@ -62,10 +62,12 @@
       background-color: rgba($color-grey-light-1, 0.9);
       color: $color-grey-dark-2;
 
+      // initial state hidden
       opacity: 0;
       transform-origin: top;
       transform: scaleY(0);
 
+      // move transition to new class so not triggered by media query
       &--activated {
         transition: transform 0.25s ease-out, opacity 0.3s;
       }
