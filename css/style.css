@@ -782,7 +782,7 @@ body {
   align-content: start;
   align-items: center;
   grid-row-gap: 4rem;
-  background-image: linear-gradient(to right bottom, rgba(170, 121, 217, 0.7), rgba(68, 30, 105, 0.7)), linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(170, 121, 217, 0.7), rgba(68, 30, 105, 0.7)), linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hero-small.jpg);
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -794,6 +794,12 @@ body {
   @media only screen and (max-width: 25em) {
     .header {
       grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 31.25rem) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(170, 121, 217, 0.7), rgba(68, 30, 105, 0.7)), linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hero-500w.jpg); } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(170, 121, 217, 0.7), rgba(68, 30, 105, 0.7)), linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hero.jpg); } }
   @supports (clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%)) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 105vh, 0 100%); }

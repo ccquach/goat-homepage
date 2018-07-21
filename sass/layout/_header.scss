@@ -12,7 +12,20 @@
   grid-row-gap: 4rem;
 
   background-image: $gradient-primary, $gradient-darken-light,
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
+
+  @media only screen and (max-width: 31.25rem) {
+    background-image: $gradient-primary, $gradient-darken-light,
+      url(../img/hero-500w.jpg);
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: $gradient-primary, $gradient-darken-light,
+      url(../img/hero.jpg);
+  }
+
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
