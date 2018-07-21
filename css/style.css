@@ -1100,10 +1100,13 @@ body {
       font-size: 1.4rem; } }
   .nav__logo {
     flex: 0 0 5rem;
-    margin-right: auto;
-    width: 5rem;
-    height: 5rem;
-    fill: currentColor; }
+    margin-right: auto; }
+    .nav__logo:link, .nav__logo:visited {
+      color: currentColor; }
+    .nav__logo-img {
+      width: 5rem;
+      height: 5rem;
+      fill: currentColor; }
   .nav__list {
     flex: 0 0 60%;
     list-style: none;
@@ -1125,15 +1128,15 @@ body {
         opacity: 0;
         transform-origin: top;
         transform: scaleY(0); }
-        .nav__list--active {
-          opacity: 1;
-          transform: scaleY(1); }
         .nav__list--activated {
           transition: transform 0.25s ease-out, opacity 0.3s; } }
     @media only screen and (max-width: 31.25em) {
       .nav__list {
         width: 100%;
         right: 0; } }
+  .nav__mobile-checkbox:checked ~ .nav__list {
+    opacity: 1;
+    transform: scaleY(1); }
   @media only screen and (max-width: 75em) {
     .nav__item {
       text-align: center;

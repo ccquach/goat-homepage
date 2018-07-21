@@ -17,16 +17,18 @@
 
   <nav class="nav">
     <!-- LOGO -->
-    <svg class="nav__logo">
-      <use xlink:href="./img/sprite.svg#icon-goat"></use>
-    </svg>
+    <a href="#home" class="nav__logo">
+      <svg class="nav__logo-img">
+        <use xlink:href="./img/sprite.svg#icon-goat"></use>
+      </svg>
+    </a>
 
     <!-- NAV -->
     <input type="checkbox" class="nav__mobile-checkbox" id="nav-toggle">
     <label for="nav-toggle" class="nav__mobile-label">Menu</label>
     <ul class="nav__list">
       <li class="nav__item">
-        <a href="#" class="nav__link">News</a>
+        <a href="#headlines" class="nav__link">News</a>
       </li>
       <li class="nav__item">
         <a href="#" class="nav__link">Team</a>
@@ -38,13 +40,13 @@
         <a href="#" class="nav__link">Tickets</a>
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link">Multimedia</a>
+        <a href="#multimedia" class="nav__link">Multimedia</a>
       </li>
       <li class="nav__item">
         <a href="#" class="nav__link">Community</a>
       </li>
       <li class="nav__item">
-        <a href="#" class="nav__link">Fans</a>
+        <a href="#fans" class="nav__link">Fans</a>
       </li>
     </ul>
 
@@ -59,7 +61,7 @@
     </form>
   </nav>
 
-  <header class="header">
+  <header class="header" id="home">
     <!-- SCORE BOX -->
     <div class="box-score">
       <div class="box-score__box">
@@ -199,7 +201,7 @@
     </div>
   </div>
 
-  <section class="headlines">
+  <section class="headlines" id="headlines">
     <h2 class="heading-2 heading-2--purple center-inline">Latest news</h2>
 
     <div class="headlines__lists">
@@ -486,7 +488,7 @@
     </button>
   </section>
 
-  <section class="multimedia">
+  <section class="multimedia" id="multimedia">
     <video class="multimedia__video" controls>
       <source src="./img/Squat-it.mp4" type="video/mp4">Sorry, your browser doesn't support embedded videos.
       <source src="./img/Squat-it.webm" type="video/webm">Sorry, your browser doesn't support embedded videos.
@@ -538,7 +540,7 @@
           <use xlink:href="./img/sprite.svg#icon-open-book"></use>
         </svg>
         <a href="#" class="card__img-link">
-          <img srcset="img/card-small-1.jpg 1x img/card-1.jpg 2x" src="./img/card-1.jpg" alt="Team rebounding" class="card__img">
+          <img srcset="img/card-small-1.jpg 1x, img/card-1.jpg 2x" src="./img/card-1.jpg" alt="Team rebounding" class="card__img">
         </a>
         <p class="card__date">7 minutes ago</p>
         <a href="#" class="card__link mt-sm">
@@ -570,7 +572,7 @@
           <use xlink:href="./img/sprite.svg#icon-open-book"></use>
         </svg>
         <a href="#" class="card__img-link">
-          <img srcset="img/card-small-2.jpg 1x img/card-2.jpg 2x" src="./img/card-2.jpg" alt="Player shooting free throw" class="card__img">
+          <img srcset="img/card-small-2.jpg 1x, img/card-2.jpg 2x" src="./img/card-2.jpg" alt="Player shooting free throw" class="card__img">
         </a>
         <p class="card__date">50 minutes ago</p>
         <a href="#" class="card__link mt-sm">
@@ -601,7 +603,7 @@
           <use xlink:href="./img/sprite.svg#icon-youtube"></use>
         </svg>
         <a href="#" class="card__img-link">
-          <img srcset="img/card-small-3.jpg 1x img/card-3.jpg 2x" src="./img/card-3.jpg" alt="Martin Howell" class="card__img">
+          <img srcset="img/card-small-3.jpg 1x, img/card-3.jpg 2x" src="./img/card-3.jpg" alt="Martin Howell" class="card__img">
         </a>
         <p class="card__date">1 hour ago</p>
         <a href="#" class="card__link mt-sm">
@@ -633,7 +635,7 @@
           <use xlink:href="./img/sprite.svg#icon-youtube"></use>
         </svg>
         <a href="#" class="card__img-link">
-          <img srcset="img/card-small-4.jpg 1x img/card-4.jpg 2x" src="./img/card-4.jpg" alt="David Hopkins shooting layup" class="card__img">
+          <img srcset="img/card-small-4.jpg 1x, img/card-4.jpg 2x" src="./img/card-4.jpg" alt="David Hopkins shooting layup" class="card__img">
         </a>
         <p class="card__date">1 hour ago</p>
         <a href="#" class="card__link mt-sm">
@@ -664,7 +666,7 @@
           <use xlink:href="./img/sprite.svg#icon-open-book"></use>
         </svg>
         <a href="#" class="card__img-link">
-          <img srcset="img/card-small-5.jpg 1x img/card-5.jpg 2x" src="./img/card-5.jpg" alt="Point guard running play" class="card__img">
+          <img srcset="img/card-small-5.jpg 1x, img/card-5.jpg 2x" src="./img/card-5.jpg" alt="Point guard running play" class="card__img">
         </a>
         <p class="card__date">Yesterday</p>
         <a href="#" class="card__link mt-sm">
@@ -695,7 +697,7 @@
           <use xlink:href="./img/sprite.svg#icon-open-book"></use>
         </svg>
         <a href="#" class="card__img-link">
-          <img srcset="img/card-small-6.jpg 1x img/card-6.jpg 2x" src="./img/card-6.jpg" alt="Team huddle" class="card__img">
+          <img srcset="img/card-small-6.jpg 1x, img/card-6.jpg 2x" src="./img/card-6.jpg" alt="Team huddle" class="card__img">
         </a>
         <p class="card__date">2 days ago</p>
         <a href="#" class="card__link mt-sm">
@@ -730,7 +732,7 @@
     </button>
   </section>
 
-  <section class="fans js--fans">
+  <section class="fans js--fans" id="fans">
     <div class="feature">
       <svg class="feature__icon rotate-45">
         <defs>
