@@ -31,6 +31,7 @@ function closeOnClickOutside(e, target) {
   if (
     parseInt(container.css('opacity')) === 1 &&
     $('#nav-toggle').prop('checked') &&
+    !$(e.target).hasClass('nav__mobile-label') &&
     !container.is(e.target) &&
     container.has(e.target).length === 0
   ) {
