@@ -110,8 +110,8 @@ function animateOnScroll() {
 
   // content cards
   new Waypoint({
-    element: $('.js--card'),
-    handler: () => $('.js--card').addClass('animated flipInY'),
+    element: $('.js--content-cards__cards'),
+    handler: () => $('.js--content-cards__cards').addClass('animated fadeIn'),
     offset: '70%'
   });
 

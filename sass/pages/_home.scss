@@ -231,6 +231,7 @@
 
     &:hover,
     &:active,
+    &:focus,
     &--active:link,
     &--active:visited {
       color: $color-primary;
@@ -254,8 +255,8 @@
   }
 }
 
-// flip in on scroll
-.js--card {
+// fade in on scroll
+.js--content-cards__cards {
   @extend %animation-before;
 
   &.animated {

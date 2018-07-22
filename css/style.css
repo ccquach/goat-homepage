@@ -1089,7 +1089,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #fefdfe;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 1px; }
   @media only screen and (max-width: 75em) {
@@ -1102,7 +1102,10 @@ body {
     flex: 0 0 5rem;
     margin-right: auto; }
     .nav__logo:link, .nav__logo:visited {
-      color: currentColor; }
+      color: currentColor;
+      transition: color 0.3s ease-out; }
+    .nav__logo:hover, .nav__logo:active, .nav__logo:focus {
+      color: #eddbed; }
     .nav__logo-img {
       width: 5rem;
       height: 5rem;
@@ -1207,7 +1210,7 @@ body {
   grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 10rem) minmax(max-content, 75rem) minmax(min-content, 25rem) minmax(6rem, 1fr);
   grid-column-gap: 2rem;
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   background-image: linear-gradient(to right bottom, rgba(170, 121, 217, 0.7), rgba(68, 30, 105, 0.7));
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
   @media only screen and (max-width: 25em) {
@@ -1237,11 +1240,11 @@ body {
   .sticky .nav__mobile-label {
     justify-self: end; }
 
-.js--headlines__list, .js--card, .js--fans {
+.js--headlines__list, .js--content-cards__cards, .js--fans {
   opacity: 0;
   animation-duration: 1s; }
 
-.js--headlines__list.animated, .js--card.animated, .js--fans.animated {
+.js--headlines__list.animated, .js--content-cards__cards.animated, .js--fans.animated {
   opacity: 1; }
 
 .headlines {
@@ -1415,7 +1418,7 @@ body {
     border-bottom: 3px solid transparent;
     padding-bottom: 2rem;
     transition: border-bottom 0.3s ease-out; }
-  .content-cards__link:hover, .content-cards__link:active, .content-cards__link--active:link, .content-cards__link--active:visited {
+  .content-cards__link:hover, .content-cards__link:active, .content-cards__link:focus, .content-cards__link--active:link, .content-cards__link--active:visited {
     color: #552583;
     border-bottom: 3px solid currentColor; }
   .content-cards__cards {
