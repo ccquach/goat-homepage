@@ -1,6 +1,7 @@
 .showcase {
   grid-column: full-start / full-end;
   background-color: $color-grey-light-4;
+  padding-bottom: 8rem;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -11,9 +12,14 @@
     grid-template-rows: repeat(3, 25vw);
   }
 
+  @include respond(tab-port) {
+    padding-bottom: 6rem;
+  }
+
   @include respond(tab-small) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 20vw);
+    padding-bottom: 4rem;
   }
 
   &__item {
