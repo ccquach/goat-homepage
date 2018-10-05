@@ -1,0 +1,296 @@
+%animation-before {
+  opacity: 0;
+  animation-duration: 1s;
+}
+
+%animation-after {
+  opacity: 1;
+}
+
+.headlines {
+  grid-column: col-start 2 / col-end 7;
+  padding-bottom: 8rem;
+  @include flex-center-column;
+
+  @include respond(tab-port) {
+    grid-column: center-start / center-end;
+  }
+
+  @include respond(tab-port) {
+    padding-bottom: 6rem 0;
+  }
+
+  @include respond(tab-small) {
+    padding: 4rem 0;
+  }
+
+  &__lists {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3.5rem;
+    align-items: center;
+
+    @include respond(tab-small) {
+      @include flex-center-column;
+    }
+  }
+
+  &__list {
+    @include respond(tab-small) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__writer {
+    @include flex-center-column;
+
+    @include respond(tab-small) {
+      flex-direction: row;
+    }
+
+    &-details {
+      @include flex-center-column;
+
+      @include respond(tab-small) {
+        margin-left: 1.5rem;
+      }
+    }
+
+    &-name {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 400;
+      margin-bottom: -2px;
+    }
+
+    &-title {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+    }
+
+    &-img {
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// fade in right on scroll
+.js--headlines__list {
+  @extend %animation-before;
+
+  &-1 {
+    animation-delay: 0;
+  }
+  &-2 {
+    animation-delay: 0.5s;
+  }
+  &-3 {
+    animation-delay: 1s;
+  }
+
+  &.animated {
+    @extend %animation-after;
+  }
+}
+
+.multimedia {
+  grid-column: center-start / center-end;
+
+  @include section-padding;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(25vw, 1fr));
+  grid-column-gap: 6rem;
+  align-items: center;
+
+  @include respond(tab-port) {
+    grid-template-columns: none;
+    grid-row-gap: 2rem;
+  }
+
+  &__video {
+    width: 100%;
+
+    @include respond(tab-port) {
+      order: 1;
+    }
+  }
+
+  &__content {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, min-content) 1fr;
+    grid-column-gap: 3rem;
+
+    @include respond(tab-port) {
+      text-align: center;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    margin-bottom: 3rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &--1 {
+      grid-column: 1 / 2;
+
+      @include respond(tab-port) {
+        justify-self: end;
+      }
+    }
+
+    &--2 {
+      grid-column: 2 / 3;
+
+      @include respond(tab-port) {
+        justify-self: start;
+      }
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: $color-secondary-light;
+    transition: fill 0.3s ease-out;
+
+    &:hover {
+      fill: $color-secondary;
+    }
+  }
+
+  &__btn {
+    grid-column: 3 / -1;
+    justify-self: center;
+
+    @include respond(tab-port) {
+      justify-self: start;
+    }
+  }
+}
+
+.content-cards {
+  grid-column: full-start / full-end;
+  background-color: $color-grey-light-4;
+  @include section-padding;
+
+  display: grid;
+  grid-template-columns:
+    minmax(6rem, 1fr)
+    repeat(4, [col-start] minmax(min-content, 28.5rem) [col-end])
+    minmax(6rem, 1fr);
+  grid-row-gap: 6rem;
+
+  @include respond(phone-small) {
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      repeat(4, [col-start] minmax(min-content, 28.5rem) [col-end])
+      minmax(2rem, 1fr);
+  }
+
+  & > * {
+    grid-column: col-start 1 / col-end 4;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: inherit;
+      display: inline-block;
+      padding: 1.5rem 2rem;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 2rem;
+      transition: border-bottom 0.3s ease-out;
+    }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &--active:link,
+    &--active:visited {
+      color: $color-primary;
+      border-bottom: 3px solid currentColor;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    grid-gap: 5rem;
+
+    @include respond(phone-small) {
+      grid-template-columns: none;
+      grid-gap: 3rem;
+    }
+  }
+
+  &__btn {
+    justify-self: center;
+  }
+}
+
+// fade in on scroll
+.js--content-cards__cards {
+  @extend %animation-before;
+
+  &.animated {
+    @extend %animation-after;
+  }
+}
+
+.fans {
+  grid-column: center-start / center-end;
+  @include section-padding;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  justify-items: center;
+
+  @include respond(big-desk) {
+    grid-gap: 4rem;
+  }
+
+  @include respond(tab-small) {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  }
+
+  @include respond(phone-small) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+
+// fade in up on scroll
+.js--fans {
+  @extend %animation-before;
+
+  &.animated {
+    @extend %animation-after;
+  }
+}

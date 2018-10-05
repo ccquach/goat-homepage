@@ -1,0 +1,64 @@
+// COLORS
+
+$color-primary: #552583;
+$color-primary-light: #aa79d9;
+$color-primary-dark: #441e69;
+
+$color-secondary: #fdb927;
+$color-secondary-light: #fecf6a;
+
+$color-red: #e74c3c;
+$color-green: #05c46b;
+
+$color-grey-light-1: #fefdfe;
+$color-grey-light-2: #bdbdbd;
+$color-grey-light-3: #d1c4e9;
+$color-grey-light-4: #f7f7f7;
+
+$color-grey-dark-1: #757575;
+$color-grey-dark-2: #212121;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-facebook: #3b5998;
+$color-instagram: #c32aa3;
+$color-twitter: #1da1f2;
+$color-googleplus: #db4437;
+$color-snapchat: #fffc00;
+$color-youtube: #ff0000;
+
+// GRADIENTS
+
+$gradient-primary: linear-gradient(
+  to right bottom,
+  rgba($color-primary-light, 0.7),
+  rgba($color-primary-dark, 0.7)
+);
+
+$gradient-secondary: linear-gradient(
+  to right bottom,
+  rgba($color-secondary-light, 0.7),
+  rgba($color-secondary, 0.7)
+);
+
+$gradient-darken-light: linear-gradient(
+  to right bottom,
+  rgba($color-black, 0.3),
+  rgba($color-black, 0.3)
+);
+
+$gradient-darken-dark: linear-gradient(
+  to right bottom,
+  rgba($color-black, 0.5),
+  rgba($color-black, 0.5)
+);
+
+// FONTS
+
+$font-primary: 'Open Sans', sans-serif;
+$font-display: 'Lato', sans-serif;
+
+// OPACITY
+
+$opacity-icon: 0.65;

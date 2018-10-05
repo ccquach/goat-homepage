@@ -1,0 +1,82 @@
+.share {
+  @include flex-center-column;
+  z-index: 20;
+  padding: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-out 0.3s;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  @include respond(phone) {
+    flex-direction: row;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__link {
+    @include respond(phone) {
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    fill: rgba($color-white, $opacity-icon);
+    transition: fill 0.3s ease-out;
+
+    &--lg {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom: 2rem;
+    }
+    &--md {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    &--sm {
+      width: 2rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    @include respond(huge-desk) {
+      &--lg {
+        width: 4rem;
+        height: 4rem;
+        margin-bottom: 3rem;
+      }
+      &--md {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 2rem;
+      }
+      &--sm {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__link:hover &__icon {
+    &--1 {
+      fill: $color-facebook;
+    }
+    &--2 {
+      fill: $color-googleplus;
+    }
+    &--3 {
+      fill: $color-twitter;
+    }
+  }
+}

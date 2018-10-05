@@ -1,0 +1,93 @@
+.banner {
+  grid-column: full-start / full-end;
+
+  @include show-share;
+  @include section-padding;
+  background-color: $color-white;
+  width: 100%;
+  height: 40vw;
+
+  @supports (clip-path: polygon(0 15vh, 100% 0, 100% 75%, 0 100%)) or
+    (-webkit-clip-path: polygon(0 15vh, 100% 0, 100% 75%, 0 100%)) {
+    clip-path: polygon(0 15vh, 100% 0, 100% 75%, 0 100%);
+    padding: 0;
+
+    @include respond(big-desk) {
+      clip-path: polygon(0 15vh, 100% 0, 100% 70%, 0 100%);
+    }
+
+    @include respond(tab-land) {
+      clip-path: polygon(0 10vh, 100% 0, 100% 75%, 0 100%);
+    }
+
+    @include respond(tab-port) {
+      clip-path: polygon(0 10vh, 100% 0, 100% 70%, 0 100%);
+    }
+
+    @include respond(tab-small) {
+      clip-path: polygon(0 5vh, 100% 0, 100% 75%, 0 100%);
+    }
+  }
+
+  &__title {
+    @include absolute-center;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    color: rgba($color-grey-light-1, 0.9);
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+
+    @include respond(big-desk) {
+      width: 70%;
+      font-size: 3.5rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(tab-small) {
+      font-size: 2.5rem;
+      margin: 2rem;
+    }
+
+    @include respond(phone-small) {
+      font-size: 2rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+    filter: brightness(80%);
+    transition: all 0.5s ease-out;
+  }
+
+  // FUNCTIONALITY
+
+  &:hover &__img {
+    filter: brightness(60%);
+  }
+
+  &:hover &__title {
+    opacity: 1;
+  }
+}

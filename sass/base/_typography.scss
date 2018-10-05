@@ -1,0 +1,75 @@
+body {
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.7;
+  color: $color-grey-dark-2;
+}
+
+%heading {
+  font-family: $font-display;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.heading {
+  &-1 {
+    @extend %heading;
+    font-size: 4rem;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: $color-grey-light-1;
+
+    @include respond(tab-port) {
+      font-size: 3.5rem;
+    }
+
+    @include respond(tab-small) {
+      font-size: 2.75rem;
+    }
+  }
+
+  &-2 {
+    @extend %heading;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 5rem;
+      margin: 3rem auto 4rem;
+    }
+
+    &--purple::after {
+      background-image: $gradient-primary;
+    }
+
+    &--gold::after {
+      background-image: $gradient-secondary;
+    }
+  }
+
+  &-3 {
+    @extend %heading;
+    font-size: 1.8rem;
+  }
+
+  &-4 {
+    @extend %heading;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
